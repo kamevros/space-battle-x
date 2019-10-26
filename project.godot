@@ -1,0 +1,29 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[  ]
+_global_script_class_icons={
+
+}
+
+[application]
+
+config/name="Space Battle X"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+
+[layer_names]
+
+3d_render/size/height=600
+3d_render/size/width=1024
+3d_render/enable_file_logging=false
