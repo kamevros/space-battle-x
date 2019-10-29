@@ -13,12 +13,12 @@ current = true
 script = ExtResource( 1 )
 
 [node name="Spaceship_P1" parent="FollowerCamera" instance=ExtResource( 2 )]
-position = Vector2( -495.11, -4.5575 )
+position = Vector2( 480, 330 )
 player = "one"
 opponent_spaceship_path = NodePath("../../FollowerCamera/Spaceship_P2")
 
 [node name="Spaceship_P2" parent="FollowerCamera" instance=ExtResource( 2 )]
-position = Vector2( 532.229, -6.79639 )
+position = Vector2( 1370, 590 )
 player = "two"
 opponent_spaceship_path = NodePath("../../FollowerCamera/Spaceship_P1")
 flipped = true
