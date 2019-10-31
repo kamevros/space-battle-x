@@ -11,6 +11,7 @@ export(float) var defence_value
 export(NodePath) var opponent_spaceship_path
 export var flipped = false
 
+onready var viewport_rect : Rect2 = get_viewport_rect()
 onready var direction : Vector2 = Vector2.ZERO
 
 var opponent_spaceship
@@ -51,7 +52,7 @@ func get_input() -> Vector2:
 func clamp_player_viewport() -> Vector2:
 	var size : Vector2 = $AnimatedSprite.frames.get_frame("default", 0).get_size()
 	
-	position.x = clamp(position.x, 0 + size.x / 2, get_viewport().size.x - size.x / 2)
-	position.y = clamp(position.y, 0 + size.y / 2, get_viewport().size.y - size.y / 2)
+	position.x = clamp(position.x, size.x / 2, ProjectSettings.get("display/window/size/width") - (size.x / 2))
+	position.y = clamp(position.y, size.y / 2, ProjectSettings.get("display/window/size/height") - (size.y / 2))
 	
 	return position
